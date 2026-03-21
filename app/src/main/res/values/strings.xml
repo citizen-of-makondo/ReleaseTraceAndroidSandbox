@@ -4,6 +4,9 @@
     <string name="sandbox_description_v2">This build demonstrates a cleaner release summary view for product, QA, and support teams.</string>
     <string name="app_version_display">Current app version: 1.1.0</string>
     <string name="highlights_title">What changed in this release</string>
+    <string name="highlights_empty">No highlights recorded for this build.</string>
     <string name="qa_focus_title">QA focus checklist</string>
+    <string name="qa_focus_empty">No QA checklist items were generated.</string>
     <string name="known_issues_title">Known issues</string>
+    <string name="known_issues_empty">No known issues reported.</string>
 </resources>

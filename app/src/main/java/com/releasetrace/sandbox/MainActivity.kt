@@ -17,8 +17,24 @@ class MainActivity : AppCompatActivity() {
 
         descriptionText.text = getString(R.string.sandbox_description_v2)
         versionText.text = getString(R.string.app_version_display)
-        highlightsText.text = ReleaseSummary.highlights.joinToString(separator = "\n") { "• $it" }
-        qaFocusText.text = ReleaseSummary.qaFocus.joinToString(separator = "\n") { "• $it" }
-        knownIssuesText.text = ReleaseSummary.knownIssues.joinToString(separator = "\n") { "• $it" }
+        highlightsText.text = formatBulletList(
+            ReleaseSummary.highlights,
+            getString(R.string.highlights_empty),
+        )
+        qaFocusText.text = formatBulletList(
+            ReleaseSummary.qaFocus,
+            getString(R.string.qa_focus_empty),
+        )
+        knownIssuesText.text = formatBulletList(
+            ReleaseSummary.knownIssues,
+            getString(R.string.known_issues_empty),
+        )
+    }
+
+    private fun formatBulletList(items: List<String>, emptyText: String): String {
+        if (items.isEmpty()) {
+            return "• $emptyText"
+        }
+        return items.joinToString(separator = "\n") { "• $it" }
     }
 }
