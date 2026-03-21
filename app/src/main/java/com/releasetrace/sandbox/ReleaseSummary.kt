@@ -12,5 +12,8 @@ object ReleaseSummary {
         "Rotate device and ensure the content keeps readable spacing.",
         "Check long text clipping on smaller displays.",
     )
-}
 
+    val knownIssues = listOf(
+        "In this sandbox build, known issues are informational and not yet synced from backend.",
+    )
+}

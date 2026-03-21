@@ -77,12 +77,33 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
+            android:textAppearance="@style/TextAppearance.Material3.BodyMedium"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/qaFocusTitleText" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/knownIssuesTitleText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="@string/known_issues_title"
+            android:textAppearance="@style/TextAppearance.Material3.TitleMedium"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/qaFocusText" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/knownIssuesText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
             android:layout_marginBottom="12dp"
             android:textAppearance="@style/TextAppearance.Material3.BodyMedium"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/qaFocusTitleText" />
+            app:layout_constraintTop_toBottomOf="@id/knownIssuesTitleText" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

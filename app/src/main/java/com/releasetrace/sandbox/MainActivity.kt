@@ -13,10 +13,12 @@ class MainActivity : AppCompatActivity() {
         val versionText = findViewById<MaterialTextView>(R.id.versionText)
         val highlightsText = findViewById<MaterialTextView>(R.id.highlightsText)
         val qaFocusText = findViewById<MaterialTextView>(R.id.qaFocusText)
+        val knownIssuesText = findViewById<MaterialTextView>(R.id.knownIssuesText)
 
         descriptionText.text = getString(R.string.sandbox_description_v2)
         versionText.text = getString(R.string.app_version_display)
         highlightsText.text = ReleaseSummary.highlights.joinToString(separator = "\n") { "• $it" }
         qaFocusText.text = ReleaseSummary.qaFocus.joinToString(separator = "\n") { "• $it" }
+        knownIssuesText.text = ReleaseSummary.knownIssues.joinToString(separator = "\n") { "• $it" }
     }
 }
