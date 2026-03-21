@@ -1,6 +1,6 @@
 # Changelog
 
-## Unreleased (target: v1.2.0)
+## v1.2.0 - 2026-03-21
 - Add Known issues block to release summary screen.
 - Add empty-state fallbacks for release, QA, and issue sections.
 - Reduce string allocation overhead while building bullet lists.
