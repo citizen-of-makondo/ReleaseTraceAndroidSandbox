@@ -35,6 +35,15 @@ class MainActivity : AppCompatActivity() {
         if (items.isEmpty()) {
             return "• $emptyText"
         }
-        return items.joinToString(separator = "\n") { "• $it" }
+
+        val estimatedLength = items.sumOf { it.length + 3 }
+        val builder = StringBuilder(estimatedLength)
+        items.forEachIndexed { index, item ->
+            if (index > 0) {
+                builder.append('\n')
+            }
+            builder.append("• ").append(item)
+        }
+        return builder.toString()
     }
 }
