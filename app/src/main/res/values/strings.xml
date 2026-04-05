@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">ReleaseTrace Sandbox</string>
     <string name="sandbox_title">ReleaseTrace Demo App</string>
-    <string name="sandbox_description_v2">This build demonstrates a cleaner release summary view for product, QA, and support teams.</string>
+    <string name="sandbox_description_v2">This build demonstrates a clearer release summary view for product, QA, and support teams.</string>
     <string name="app_version_display">Current app version: 1.2.0</string>
     <string name="highlights_title">What changed in this release</string>
     <string name="highlights_empty">No highlights recorded for this build.</string>

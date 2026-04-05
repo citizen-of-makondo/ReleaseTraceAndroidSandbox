@@ -2,18 +2,18 @@ package com.releasetrace.sandbox
 
 object ReleaseSummary {
     val highlights = listOf(
-        "Added a dedicated release status section with version visibility.",
-        "Improved home screen copy to explain app purpose for QA and support.",
-        "Structured highlights so updates are easier to scan by non-engineers.",
+        "Refreshed the release summary with clearer version and note copy.",
+        "Updated the home screen messaging so QA and support can scan changes faster.",
+        "Kept release highlights, QA focus, and known issues grouped for easier review.",
     )
 
     val qaFocus = listOf(
-        "Verify launch screen renders version and highlights.",
-        "Rotate device and ensure the content keeps readable spacing.",
-        "Check long text clipping on smaller displays.",
+        "Verify the release summary still reads cleanly after rotation.",
+        "Check that long highlight text wraps without clipping on smaller displays.",
+        "Confirm the known issues block remains visible at the bottom of the screen.",
     )
 
     val knownIssues = listOf(
-        "In this sandbox build, known issues are informational and not yet synced from backend.",
+        "Known issues are informational in this sandbox build and are not synced from a backend.",
     )
 }
