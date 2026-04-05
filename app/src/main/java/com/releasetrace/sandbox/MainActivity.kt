@@ -16,7 +16,7 @@ class MainActivity : AppCompatActivity() {
         val knownIssuesText = findViewById<MaterialTextView>(R.id.knownIssuesText)
 
         descriptionText.text = getString(R.string.sandbox_description_v2)
-        versionText.text = getString(R.string.app_version_display)
+        versionText.text = getString(R.string.app_version_display, BuildConfig.VERSION_NAME)
         highlightsText.text = formatBulletList(
             ReleaseSummary.highlights,
             getString(R.string.highlights_empty),
@@ -32,13 +32,14 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun formatBulletList(items: List<String>, emptyText: String): String {
-        if (items.isEmpty()) {
+        val normalizedItems = items.map(String::trim).filter { it.isNotEmpty() }
+        if (normalizedItems.isEmpty()) {
             return "• $emptyText"
         }
 
-        val estimatedLength = items.sumOf { it.length + 3 }
+        val estimatedLength = normalizedItems.sumOf { it.length + 3 }
         val builder = StringBuilder(estimatedLength)
-        items.forEachIndexed { index, item ->
+        normalizedItems.forEachIndexed { index, item ->
             if (index > 0) {
                 builder.append('\n')
             }
