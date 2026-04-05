@@ -3,6 +3,7 @@
     <string name="sandbox_title">ReleaseTrace Demo App</string>
     <string name="sandbox_description_v2">This build demonstrates a clearer release summary view for product, QA, and support teams.</string>
     <string name="app_version_display">Current app version: %1$s</string>
+    <string name="version_unknown">unknown</string>
     <string name="highlights_title">What changed in this release</string>
     <string name="highlights_empty">No highlights recorded for this build.</string>
     <string name="qa_focus_title">QA focus checklist</string>

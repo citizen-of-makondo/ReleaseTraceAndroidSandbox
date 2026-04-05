@@ -16,7 +16,7 @@ class MainActivity : AppCompatActivity() {
         val knownIssuesText = findViewById<MaterialTextView>(R.id.knownIssuesText)
 
         descriptionText.text = getString(R.string.sandbox_description_v2)
-        versionText.text = getString(R.string.app_version_display, BuildConfig.VERSION_NAME)
+        versionText.text = getString(R.string.app_version_display, resolveAppVersion())
         highlightsText.text = formatBulletList(
             ReleaseSummary.highlights,
             getString(R.string.highlights_empty),
@@ -46,5 +46,10 @@ class MainActivity : AppCompatActivity() {
             builder.append("• ").append(item)
         }
         return builder.toString()
+    }
+
+    private fun resolveAppVersion(): String {
+        val packageInfo = packageManager.getPackageInfo(packageName, 0)
+        return packageInfo.versionName ?: getString(R.string.version_unknown)
     }
 }
